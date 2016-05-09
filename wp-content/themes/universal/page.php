@@ -1,0 +1,12 @@
+<?php
+	get_header();
+	get_template_part( 'modal' ); 
+	if(have_posts()) : 
+		while(have_posts()) : the_post(); 
+			the_content();
+		endwhile;
+	else : 
+		echo "<p>No Content Found!</p>";
+	endif;
+	get_footer();
+?>
